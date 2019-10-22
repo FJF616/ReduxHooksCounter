@@ -9,6 +9,8 @@ export default function rootReducer(state = initialState, action) {
       return { counter: state.counter +1 }
     case 'DECREMENT':
       return { counter: state.counter -1 }
+    case 'CLEAR':
+      return { ...initialState }
     default: 
       return state;
     }

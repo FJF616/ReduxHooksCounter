@@ -24,6 +24,14 @@ function App() {
           icon="minus"
         />
       </Button.Group>
+        <Button 
+          success 
+          onClick={() => dispatch({type: 'CLEAR'})} 
+          icon="refresh"
+          style={{margin: '5px'}}
+          label="Reset Counter"
+          disabled={counter === 0 ? true : false}
+        />
     </div>
   );
 }

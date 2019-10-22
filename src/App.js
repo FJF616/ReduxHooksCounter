@@ -12,9 +12,17 @@ function App() {
     <div className="App">
       <h1>Counter: {counter} </h1>
       <Button.Group>
-        <Button positive onClick={() => dispatch({type: 'INCREMENT'})} icon="plus"/>  
+        <Button 
+          positive 
+          onClick={() => dispatch({type: 'INCREMENT'})} 
+          icon="plus"
+        />  
         <Button.Or/>
-        <Button negative onClick={() => dispatch({type: 'DECREMENT'})} icon="minus"/>
+        <Button 
+          negative 
+          onClick={() => dispatch({type: 'DECREMENT'})} 
+          icon="minus"
+        />
       </Button.Group>
     </div>
   );

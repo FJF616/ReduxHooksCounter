@@ -14,12 +14,15 @@ function App() {
       <Button.Group>
         <Button 
           positive 
+          label="Increment"
+          labelPosition="left"
           onClick={() => dispatch({type: 'INCREMENT'})} 
           icon="plus"
         />  
         <Button.Or/>
         <Button 
           negative 
+          label="Decrement"
           onClick={() => dispatch({type: 'DECREMENT'})} 
           icon="minus"
         />

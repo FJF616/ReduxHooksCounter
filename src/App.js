@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
+import { useSelector, useDispatch } from 'react-redux';
+import { Button } from 'semantic-ui-react';
 import './App.css';
 
+
 function App() {
+
+  const dispatch = useDispatch();
+  const counter = useSelector((state) => state.counter);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Counter: {counter} </h1>
+      <Button.Group>
+        <Button positive onClick={() => dispatch({type: 'INCREMENT'})} icon="plus"/>  
+        <Button.Or/>
+        <Button negative onClick={() => dispatch({type: 'DECREMENT'})} icon="minus"/>
+      </Button.Group>
     </div>
   );
 }

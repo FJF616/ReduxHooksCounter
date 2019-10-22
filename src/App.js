@@ -25,7 +25,7 @@ function App() {
         />
       </Button.Group>
         <Button 
-          success 
+          color="facebook" 
           onClick={() => dispatch({type: 'CLEAR'})} 
           icon="refresh"
           style={{margin: '5px'}}
